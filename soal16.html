@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Input word</p>
+        <input id="string">
+        <button id="btnsubmit" type="button">Submit</button>
+        <p><span id="for"></span><span id="back"></span></p>
+
+        <script type="text/javascript">
+            function reverseText() {
+                var forward = document.getElementById("string").value;
+                var backward = forward.split("").reverse().join("");
+                document.getElementById("for").innerHTML = forward;
+                document.getElementById("back").innerHTML = backward;
+            }
+
+            document.getElementById("btnsubmit").addEventListener("click", reverseText);
+        </script>
+    </body>
+</html>
